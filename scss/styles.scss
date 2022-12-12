@@ -1,0 +1,55 @@
+//font-families
+// @font-face {
+//     font-family: "Inter";
+//     src: url("/assets/fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
+//     font-weight: 100 900;
+//     font-stretch: 25% 151%;
+// }
+@font-face {
+    font-family: "Inter";
+    src: url("/assets/fonts/static/Inter-Regular.woff2") format("woff2"), url("/assets/fonts/static/Inter-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/assets/fonts/static/Inter-Bold.woff2") format("woff2"), url("/assets/fonts/static/Inter-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("/assets/fonts/static/Inter-ExtraBold.woff2") format("woff2"), url("/assets/fonts/static/Inter-ExtraBold.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+}
+
+// colors
+$color-neutral-900: #00001a;
+$color-neutral-100: #fffdfa;
+$color-button-400: #f15d51;
+$Gunmetal: #5e607a;
+$Silver: #c5c6ce;
+$Yellow: #e9aa52;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    // font: inherit;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+p {
+    font-weight: 400;
+}

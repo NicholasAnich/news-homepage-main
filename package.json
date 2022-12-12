@@ -1,0 +1,14 @@
+{
+  "name": "news-homepage-main",
+  "version": "1.0.0",
+  "description": "FE mentor project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicholas Anich",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.56.2"
+  }
+}
