@@ -1,10 +1,4 @@
 //font-families
-// @font-face {
-//     font-family: "Inter";
-//     src: url("/assets/fonts/Inter-VariableFont_slnt\,wght.ttf") format("truetype");
-//     font-weight: 100 900;
-//     font-stretch: 25% 151%;
-// }
 @font-face {
     font-family: "Inter";
     src: url("/assets/fonts/static/Inter-Regular.woff2") format("woff2"), url("/assets/fonts/static/Inter-Regular.woff") format("woff");
@@ -27,12 +21,33 @@
 }
 
 // colors
-$color-neutral-900: #00001a;
-$color-neutral-100: #fffdfa;
-$color-button-400: #f15d51;
-$Gunmetal: #5e607a;
-$Silver: #c5c6ce;
-$Yellow: #e9aa52;
+$dark-space-blue: #00001a;
+$almost-white: #fffdfa;
+$light-vermillion: #f15d51;
+$gunmetal: #5e607a;
+$silver: #c5c6ce;
+$yellow: #e9aa52;
+
+// font sizes
+$root-font: 15;
+$heading-xl: 56;
+$heading-l: 40;
+$heading-m: 32;
+$heading-s: 20;
+$heading-xs: 18;
+
+@mixin converToRem($property, $size, $root-size: $root-font) {
+    #{$property}: calc($size / $root-font) + rem;
+}
+
+@function convertLineHeight($size) {
+    $result: ($size / 15);
+    @return $result;
+}
+
+:root {
+    font-size: ($root-font) + px;
+}
 
 *,
 *::before,
@@ -43,13 +58,25 @@ $Yellow: #e9aa52;
 * {
     margin: 0;
     padding: 0;
-    // font: inherit;
+}
+
+html {
+    font-size: 100%;
 }
 
 body {
     font-family: "Inter", sans-serif;
+    color: $dark-space-blue;
+}
+
+h1 {
+    @include converToRem(font-size, $heading-l);
+
+    @media (min-width: 600px) {
+        color: blue;
+    }
 }
 
 p {
-    font-weight: 400;
+    line-height: convertLineHeight(26);
 }
